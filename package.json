@@ -1,9 +1,27 @@
 {
-	"name": "audio-player",
+	"name": "@fel1x-developer/audio-player",
 	"version": "0.0.1",
+	"description": "SvelteKit audio player for your music, with custom controls, playlist, filters, and search functionality.",
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"audio",
+		"player",
+		"mp3",
+		"music"
+	],
+	"author": "Minsoo Choo <minsoochoo0122@proton.me>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fel1x-developer/audio-player.git"
+	},
+	"bugs": {
+		"url": "https://github.com/fel1x-developer/audio-player/issues"
+	},
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
+		"build": "vite build && bun run prepack",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
@@ -12,7 +30,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run && npm run test:e2e",
+		"test": "bun run test:unit -- --run && bun run test:e2e",
 		"test:e2e": "playwright test",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
