@@ -1,6 +1,6 @@
 {
 	"name": "@minsoochoo/audio-player",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "SvelteKit audio player for your music, with custom controls, playlist, filters, and search functionality.",
 	"keywords": [
 		"svelte",
