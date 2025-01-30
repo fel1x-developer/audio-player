@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@config '../../tailwind.config.ts';
 
 @theme {
 	--color-player-background: #18191f;
