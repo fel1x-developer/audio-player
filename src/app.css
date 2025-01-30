@@ -1,3 +1,33 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+@config '../tailwind.config.ts';
+
+@theme {
+    /*--color-text: #1b0a0d;*/
+    /*--color-background: #fdf7f8;*/
+    /*--color-primary: #cf3d59;*/
+    /*--color-secondary: #e98d9e;*/
+    /*--color-accent: #e75974;*/
+    /*--color-text-dark: #f5e5e8;*/
+    /*--color-background-dark: #080203;*/
+    /*--color-primary-dark: #c0304d;*/
+    /*--color-secondary-dark: #741627;*/
+    /*--color-accent-dark: #951823;*/
+    --color-player-background: #18191f;
+    --color-title-color: #ffffff;
+    --color-time-color: #ffffff;
+    --color-progress-slider: #e75974;
+    --color-progress-used: #ffffff;
+    --color-progress-left: #151616;
+    --color-buffer-loaded: #1f212b;
+    --color-volume-slider: #e75974;
+    --color-volume-used: #ffffff;
+    --color-volume-left: #151616;
+    --color-playlist-background: #18191f;
+    --color-playlist-text: #fdf7f8;
+    --color-playlist-background-hover-active: #18191f;
+    --color-playlist-text-hover-active: #cf3d59;
+
+    --font-quicksand: Quicksand, sans-serif;
+    --font-poppins: Poppins, sans-serif;
+    --font-valera-round: Valera Round, sans-serif;
+}

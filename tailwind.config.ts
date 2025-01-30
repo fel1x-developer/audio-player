@@ -1,11 +1,6 @@
+import 'dotenv/config';
 import type { Config } from 'tailwindcss';
 
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
-
-	theme: {
-		extend: {}
-	},
-
-	plugins: []
-} satisfies Config;
+	darkMode: process.env.STORYBOOK === 'true' ? ['class', '[data-mode="dark"]'] : ['media']
+} as Config;
