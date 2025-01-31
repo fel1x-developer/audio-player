@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import './index.css';
 	import PageTemplate from './components/PageTemplate.svelte';
 	import PlayerTemplate from './components/PlayerTemplate.svelte';
 	import TitleAndTimeBox from './components/TitleAndTimeBox.svelte';
