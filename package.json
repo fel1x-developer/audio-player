@@ -33,8 +33,8 @@
 		"test:unit": "vitest",
 		"test": "bun run test:unit -- --run && bun run test:e2e",
 		"test:e2e": "playwright test",
-		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"storybook": "STORYBOOK=true storybook dev -p 6006",
+		"build-storybook": "STORYBOOK=true storybook build"
 	},
 	"files": [
 		"dist",
