@@ -2,6 +2,8 @@
 	import type { EventHandler } from 'svelte/elements';
 	import previousBtn from '../icons/previous.png';
 
+	import "../styles.css";
+
 	const { onclick }: { onclick: EventHandler } = $props();
 </script>
 

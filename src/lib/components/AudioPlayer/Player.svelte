@@ -1,13 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import PageTemplate from './components/PageTemplate.svelte';
-	import PlayerTemplate from './components/PlayerTemplate.svelte';
-	import TitleAndTimeBox from './components/TitleAndTimeBox.svelte';
 	import Title from './components/Title.svelte';
 	import Time from './components/Time.svelte';
 	import Progress from './components/Progress.svelte';
-	import ButtonsAndVolumeBox from './components/ButtonsAndVolumeBox.svelte';
-	import ButtonsBox from './components/ButtonsBox.svelte';
 	import Loop from './components/Loop.svelte';
 	import Previous from './components/Previous.svelte';
 	import Play from './components/Play.svelte';
@@ -15,8 +10,9 @@
 	import Next from './components/Next.svelte';
 	import Shuffle from './components/Shuffle.svelte';
 	import Volume from './components/Volume.svelte';
-	import PlaylistTemplate from './components/PlaylistTemplate.svelte';
 	import PlaylistItem from './components/PlaylistItem.svelte';
+
+	import "./styles.css";
 
 	interface Track {
 		url: string;
@@ -277,15 +273,15 @@
 	// 	!sortTracks ? null : a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
 </script>
 
-<PageTemplate>
-	<PlayerTemplate>
-		<TitleAndTimeBox>
+<div>
+	<div class="font-quicksand bg-player-background overflow-auto rounded-xl px-5 sm:px-10">
+		<div class="mt-8 mb-5 grid grid-cols-1 gap-y-6 sm:grid-cols-[auto_200px]">
 			<Title {title} />
 			<Time time={`${!time ? '0:00' : format(time)}/${!length ? '0:00' : format(length)}`} />
-		</TitleAndTimeBox>
+		</div>
 		<Progress bind:value={slider} progress={buffer} bind:drag onmouseup={play} ontouchend={play} />
-		<ButtonsAndVolumeBox>
-			<ButtonsBox>
+		<div class="mb-8 grid grid-cols-1 md:grid-cols-[auto_30%]">
+			<div class="grid grid-cols-[repeat(3,auto)] place-items-center md:grid-cols-[repeat(5,auto)]">
 				<Loop {looped} onclick={loop} />
 				<Previous onclick={previous} />
 				{#if isPlaying}
@@ -295,11 +291,14 @@
 				{/if}
 				<Next onclick={next} />
 				<Shuffle {shuffled} onclick={shuffle} />
-			</ButtonsBox>
+			</div>
 			<Volume bind:volume />
-		</ButtonsAndVolumeBox>
-	</PlayerTemplate>
-	<PlaylistTemplate>
+		</div>
+	</div>
+	<div
+		class="no-scroll mx-auto my-5 flex max-h-100 min-h-32 flex-col overflow-x-hidden pr-2.5"
+		style:scrollbar-width="none"
+	>
 		{#key curTrack}
 			{#each playlist as el, index (index)}
 				<PlaylistItem
@@ -314,5 +313,11 @@
 				/>
 			{/each}
 		{/key}
-	</PlaylistTemplate>
-</PageTemplate>
+	</div>
+</div>
+
+<style>
+    .no-scroll::-webkit-scrollbar {
+        display: none;
+    }
+</style>

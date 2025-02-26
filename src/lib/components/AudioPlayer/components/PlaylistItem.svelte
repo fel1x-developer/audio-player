@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { EventHandler } from 'svelte/elements';
 
+	import "../styles.css";
+
 	const { status, title, onclick }: { status: boolean; title: string; onclick: EventHandler } =
 		$props();
 
@@ -9,7 +11,7 @@
 </script>
 
 <button
-	class="my-1.5 cursor-pointer rounded py-0.5 text-center {isActive
+	class="font-quicksand w-full h-full pr-2.5 my-1.5 cursor-pointer rounded py-0.5 text-center {isActive
 		? 'text-lg'
 		: 'text-base'} {isActive
 		? 'font-quicksand'

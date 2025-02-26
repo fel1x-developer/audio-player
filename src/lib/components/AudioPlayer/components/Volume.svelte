@@ -1,4 +1,6 @@
 <script lang="ts">
+	import "../styles.css";
+	
 	let { volume = $bindable<number>() }: { volume: number } = $props();
 
 	let value = $state(volume * 100);
