@@ -45,6 +45,11 @@
 	];
 </script>
 
+<svelte:head>
+	<title>audio-player demo</title>
+	<meta name="description" content="This is a demo of audio-player package." />
+</svelte:head>
+
 <div class="m-auto mt-20 h-1/2 w-1/2">
 	<Player trackList={tracks} />
 </div>
