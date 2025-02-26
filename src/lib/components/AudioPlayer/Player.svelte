@@ -11,21 +11,13 @@
 	import Shuffle from './components/Shuffle.svelte';
 	import Volume from './components/Volume.svelte';
 	import PlaylistItem from './components/PlaylistItem.svelte';
+	import format from './utils/format.js';
 
 	import "./styles.css";
 
 	interface Track {
 		url: string;
 		title: string;
-	}
-
-	function format(time: number) {
-		if (isNaN(time)) return '...';
-
-		const minutes = Math.floor(time / 60);
-		const seconds = Math.floor(time % 60);
-
-		return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 	}
 
 	const trackExample: Track[] = [
