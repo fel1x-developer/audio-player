@@ -2,7 +2,7 @@
 	import type { EventHandler } from 'svelte/elements';
 	import pauseBtn from '../icons/pause.png';
 
-	import "../styles.css";
+	import '../styles.css';
 
 	const { onclick }: { onclick: EventHandler } = $props();
 </script>

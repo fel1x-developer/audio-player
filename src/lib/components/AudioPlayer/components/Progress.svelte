@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { EventHandler } from 'svelte/elements';
 
-	import "../styles.css";
+	import '../styles.css';
 
 	let {
 		value = $bindable(),

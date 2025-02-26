@@ -13,7 +13,7 @@
 	import PlaylistItem from './components/PlaylistItem.svelte';
 	import format from './utils/format.js';
 
-	import "./styles.css";
+	import './styles.css';
 
 	interface Track {
 		url: string;
@@ -309,7 +309,7 @@
 </div>
 
 <style>
-    .no-scroll::-webkit-scrollbar {
-        display: none;
-    }
+	.no-scroll::-webkit-scrollbar {
+		display: none;
+	}
 </style>

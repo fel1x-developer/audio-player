@@ -45,6 +45,6 @@
 	];
 </script>
 
-<div class="w-1/2 h-1/2 m-auto mt-20">
+<div class="m-auto mt-20 h-1/2 w-1/2">
 	<Player trackList={tracks} />
 </div>
