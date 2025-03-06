@@ -78,6 +78,7 @@
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.9",
     "@vitest/browser": "^3.0.8",
+    "@vitest/ui": "^3.0.8",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-svelte": "^3.0.3",
