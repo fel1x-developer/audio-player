@@ -19,18 +19,13 @@ dependabot:
 
 test:
   stage: test
-  image: mcr.microsoft.com/playwright:v1.50.1-noble
+  image: oven/bun:latest
   timeout: 60m
   before_script:
-    - echo "Install bun"
-    - apt update && apt install unzip
-    - curl -fsSL https://bun.sh/install | bash
-    - source /root/.bashrc
-    - cp ~/.bun/bin/bun /usr/local/bin/bun
+    - echo "Install Playwright"
+    - bunx playwright install --with-deps
     - echo "Install dependencies"
     - bun install
-    - echo "Install Playwright Browsers"
-    - bun x playwright install --with-deps
   script:
     - echo "Run Playwright tests"
     - bun run test:headless
