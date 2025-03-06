@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
 
 	test: {
-		name: 'client',
+		name: 'Player',
 		clearMocks: true,
 		include: ['src/**/*.svelte.{test,spec}.{js,ts}', 'src/**/*.{test,spec}.{js,ts}'],
 		browser: {
