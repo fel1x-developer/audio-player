@@ -8,10 +8,10 @@ dependabot:
   variables:
     GITLAB_ACCESS_TOKEN: $GITLAB_ACCESS_TOKEN
     PROJECT: $CI_PROJECT_PATH
-    PACKAGE_MANAGER: "bun"
-    DIRECTORY: "/"
+    PACKAGE_MANAGER: 'bun'
+    DIRECTORY: '/'
     BRANCH: $CI_DEFAULT_BRANCH
-    AUTO_MERGE: "false"
+    AUTO_MERGE: 'false'
   script:
     - bundle exec ruby /app/dependabot.rb
   only:

@@ -1,9 +1,23 @@
 /// <reference types="@vitest/browser/matchers" />
 /// <reference types="@vitest/browser/providers/playwright" />
-import { render } from 'vitest-browser-svelte'
-import { expect, test } from 'vitest'
+import { render } from 'vitest-browser-svelte';
+import { describe, expect, test } from 'vitest';
 
-import Player from './Player.svelte'
+import Player, { format } from './Player.svelte';
+
+describe('format', () => {
+	test('seconds', () => {
+		expect(format(45)).toEqual('00:45');
+	});
+
+	test('minute and seconds', () => {
+		expect(format(100)).toEqual('01:40');
+	});
+
+	test('input is NaN', () => {
+		expect(format(NaN)).toEqual('...');
+	});
+});
 
 test('Player', async () => {
 	interface Track {
@@ -27,4 +41,4 @@ test('Player', async () => {
 	];
 
 	const screen = render(Player, { trackList: trackExample });
-})
+});

@@ -1,3 +1,14 @@
+<script module lang="ts">
+	export function format(time: number) {
+		if (isNaN(time)) return '...';
+
+		const minutes = Math.floor(time / 60);
+		const seconds = Math.floor(time % 60);
+
+		return `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+	}
+</script>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Title from './components/Title.svelte';
@@ -11,7 +22,6 @@
 	import Shuffle from './components/Shuffle.svelte';
 	import Volume from './components/Volume.svelte';
 	import PlaylistItem from './components/PlaylistItem.svelte';
-	import format from './utils/format.js';
 
 	import './styles.css';
 
