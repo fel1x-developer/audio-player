@@ -7,7 +7,6 @@
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Pause',
 		component: Pause,
-		tags: ['autodocs'],
 		args: {
 			onclick: fn()
 		}

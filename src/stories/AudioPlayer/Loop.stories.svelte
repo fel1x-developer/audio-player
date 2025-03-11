@@ -7,7 +7,6 @@
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Loop',
 		component: Loop,
-		tags: ['autodocs'],
 		argTypes: {
 			looped: {
 				control: {

@@ -8,7 +8,6 @@
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Volume',
 		component: Volume,
-		tags: ['autodocs'],
 		argTypes: {
 			volume: {
 				control: 'number',

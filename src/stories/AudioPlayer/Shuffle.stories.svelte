@@ -7,7 +7,6 @@
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Shuffle',
 		component: Shuffle,
-		tags: ['autodocs'],
 		argTypes: {
 			shuffled: {
 				control: {

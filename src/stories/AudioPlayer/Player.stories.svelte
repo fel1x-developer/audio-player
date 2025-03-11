@@ -6,7 +6,6 @@
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Player',
 		component: Player,
-		tags: ['autodocs'],
 		argTypes: {
 			trackList: {
 				control: 'object',
