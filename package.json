@@ -1,6 +1,6 @@
 {
   "name": "@minsoochoo/audio-player",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "SvelteKit audio player for your music, with custom controls, playlist, filters, and search functionality.",
   "keywords": [
     "svelte",
@@ -10,15 +10,15 @@
     "mp3",
     "music"
   ],
-  "homepage": "https://gitlab.com/minsoochoo/audio-player#readme",
+  "homepage": "https://www.npmjs.com/package/@minsoochoo/audio-player",
   "author": "Minsoo Choo <minsoochoo0122@proton.me>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/minsoochoo/audio-player.git"
+    "url": "git+https://github.com/fel1x-developer/audio-player.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/minsoochoo/audio-player/-/issues"
+    "url": "https://github.com/fel1x-developer/audio-player/issues"
   },
   "scripts": {
     "dev": "vite dev",
