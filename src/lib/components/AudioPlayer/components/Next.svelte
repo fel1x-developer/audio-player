@@ -2,8 +2,6 @@
 	import type { EventHandler } from 'svelte/elements';
 	import nextBtn from '../icons/next.png';
 
-	import '../styles.css';
-
 	const { onclick }: { onclick: EventHandler } = $props();
 </script>
 

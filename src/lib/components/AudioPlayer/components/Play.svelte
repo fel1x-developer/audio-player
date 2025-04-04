@@ -2,8 +2,6 @@
 	import type { EventHandler } from 'svelte/elements';
 	import playBtn from '../icons/play.png';
 
-	import '../styles.css';
-
 	const { onclick }: { onclick: EventHandler } = $props();
 </script>
 

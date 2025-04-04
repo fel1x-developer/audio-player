@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { EventHandler } from 'svelte/elements';
 
-	import '../styles.css';
-
 	const { status, title, onclick }: { status: boolean; title: string; onclick: EventHandler } =
 		$props();
 

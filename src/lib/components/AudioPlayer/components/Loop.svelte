@@ -3,8 +3,6 @@
 	import loopCurrentBtn from '../icons/loop_current.png';
 	import loopNoneBtn from '../icons/loop_none.png';
 
-	import '../styles.css';
-
 	const { looped, onclick }: { looped: boolean; onclick: EventHandler } = $props();
 </script>
 

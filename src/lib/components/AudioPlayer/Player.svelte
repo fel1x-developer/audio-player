@@ -23,8 +23,6 @@
 	import Volume from './components/Volume.svelte';
 	import PlaylistItem from './components/PlaylistItem.svelte';
 
-	import './styles.css';
-
 	interface Track {
 		url: string;
 		title: string;
@@ -318,7 +316,8 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
+	@import './styles.css';
 	.no-scroll::-webkit-scrollbar {
 		display: none;
 	}

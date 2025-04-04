@@ -1,6 +1,4 @@
 <script lang="ts">
-	import '../styles.css';
-
 	const { time }: { time: string } = $props();
 </script>
 

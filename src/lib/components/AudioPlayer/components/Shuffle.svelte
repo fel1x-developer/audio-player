@@ -3,8 +3,6 @@
 	import shuffleAllBtn from '../icons/shuffle_all.png';
 	import shuffleNoneBtn from '../icons/shuffle_none.png';
 
-	import '../styles.css';
-
 	const { shuffled, onclick }: { shuffled: boolean; onclick: EventHandler } = $props();
 </script>
 
