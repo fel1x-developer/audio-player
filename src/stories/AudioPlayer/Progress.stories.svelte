@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import Progress from '$lib/components/AudioPlayer/components/Progress.svelte';
-	import { fn } from '@storybook/test';
+	import { fn } from 'storybook/test';
 
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Progress',

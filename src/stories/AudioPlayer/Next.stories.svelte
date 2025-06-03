@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import Next from '$lib/components/AudioPlayer/components/Next.svelte';
-	import { fn } from '@storybook/test';
+	import { fn } from 'storybook/test';
 
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/Next',

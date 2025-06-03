@@ -1,6 +1,6 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import { fn } from '@storybook/test';
+	import { fn } from 'storybook/test';
 
 	import Loop from '$lib/components/AudioPlayer/components/Loop.svelte';
 

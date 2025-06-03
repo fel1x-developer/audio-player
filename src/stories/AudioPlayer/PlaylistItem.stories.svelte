@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import PlaylistItem from '$lib/components/AudioPlayer/components/PlaylistItem.svelte';
-	import { fn } from '@storybook/test';
+	import { fn } from 'storybook/test';
 
 	const { Story } = defineMeta({
 		title: 'AudioPlayer/PlaylistItem',
