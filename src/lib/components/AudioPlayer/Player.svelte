@@ -1,4 +1,5 @@
 <script module lang="ts">
+	import './styles.css';
 	export function format(time: number) {
 		if (isNaN(time)) return '...';
 
@@ -316,8 +317,7 @@
 	</div>
 </div>
 
-<style lang="postcss">
-	@import './styles.css';
+<style>
 	.no-scroll::-webkit-scrollbar {
 		display: none;
 	}
