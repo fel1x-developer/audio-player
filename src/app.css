@@ -1,14 +1,2 @@
 @import 'tailwindcss';
-
-@theme {
-	--color-text: #1b0a0d;
-	--color-background: #fdf7f8;
-	--color-primary: #cf3d59;
-	--color-secondary: #e98d9e;
-	--color-accent: #e75974;
-	--color-text-dark: #f5e5e8;
-	--color-background-dark: #080203;
-	--color-primary-dark: #c0304d;
-	--color-secondary-dark: #741627;
-	--color-accent-dark: #951823;
-}
+@import './lib/components/AudioPlayer/styles.css';
