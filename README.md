@@ -1,58 +1,100 @@
-# create-svelte
+# Audio Player
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+SvelteKit audio player for your music, with custom controls, playlist, filters, and search functionality.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+[![npm version](https://badge.fury.io/js/@minsoochoo%2Faudio-player.svg)](https://www.npmjs.com/package/@minsoochoo/audio-player)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- 🎵 Audio playback with custom controls
+- 📋 Playlist management
+- 🔀 Shuffle and loop functionality
+- 🎚️ Volume control
+- ⏯️ Play/pause/previous/next controls
+- 📱 Responsive design
+- 🎨 TailwindCSS styling
+- 📝 TypeScript support
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Installation
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm install @minsoochoo/audio-player
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## ⚠️ Important: CSS Import Required
 
-## Building
+This package uses TailwindCSS for styling. You **must** import the compiled CSS file for the component to display correctly:
 
-To build your library:
+```javascript
+// Import in your main app file
+import '@minsoochoo/audio-player/styles.css';
+```
+
+## Quick Start
+
+```svelte
+<script>
+	import { Player } from '@minsoochoo/audio-player';
+	import '@minsoochoo/audio-player/styles.css'; // Required for styling
+
+	const trackList = [
+		{
+			url: 'https://example.com/song1.mp3',
+			title: 'Song Title 1'
+		},
+		{
+			url: 'https://example.com/song2.mp3',
+			title: 'Song Title 2'
+		}
+	];
+</script>
+
+<Player {trackList} />
+```
+
+## Documentation
+
+For detailed usage instructions, troubleshooting, and advanced configuration, see [USAGE.md](./USAGE.md).
+
+## Development
 
 ```bash
-npm run package
+# Install dependencies
+bun install
+
+# Start development server
+bun run dev
+
+# Build the library
+bun run build
+
+# Run tests
+bun run test
+
+# Run Storybook
+bun run storybook
 ```
 
-To create a production version of your showcase app:
+## API
 
-```bash
-npm run build
+### Track Interface
+
+```typescript
+interface Track {
+	url: string; // Audio file URL
+	title: string; // Track title to display
+}
 ```
 
-You can preview the production build with `npm run preview`.
+### Component Props
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+```typescript
+interface PlayerProps {
+	trackList: Track[]; // Array of tracks to play
+}
 ```
+
+## License
+
+MIT © [Minsoo Choo](https://github.com/fel1x-developer)

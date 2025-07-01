@@ -1,5 +1,4 @@
 <script module lang="ts">
-	import './styles.css';
 	export function format(time: number) {
 		if (isNaN(time)) return '...';
 

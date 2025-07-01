@@ -23,9 +23,10 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && bun run prepack",
+    "build:css": "bunx @tailwindcss/cli -i ./src/lib/components/AudioPlayer/styles.css -o ./dist/styles.css --minify",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
-    "prepack": "svelte-kit sync && svelte-package && publint",
+    "prepack": "svelte-kit sync && svelte-package && bun run build:css && publint",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
@@ -39,6 +40,7 @@
   },
   "files": [
     "dist",
+    "USAGE.md",
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
@@ -52,7 +54,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
-    }
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "peerDependencies": {
     "svelte": "^5.0.0",
@@ -70,6 +73,7 @@
     "@sveltejs/kit": "^2.22.2",
     "@sveltejs/package": "^2.3.12",
     "@sveltejs/vite-plugin-svelte": "^5.1.0",
+    "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/vite": "^4.1.11",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.15.34",
